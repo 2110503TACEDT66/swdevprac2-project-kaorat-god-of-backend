@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
+import userRegister  from "@/libs/userRegister"
 
 export default function register() {
   const [email, setEmail] = useState("");
@@ -35,7 +36,7 @@ export default function register() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="max-w-md w-full space-y-8 p-8 bg-white rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold text-center">Login</h2>
+        <h2 className="text-2xl font-bold text-center">Register</h2>
         <form onSubmit={handleLogin}>
         <div className="mb-4">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
