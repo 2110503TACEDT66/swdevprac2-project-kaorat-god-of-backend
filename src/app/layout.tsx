@@ -6,6 +6,7 @@ import { getServerSession } from 'next-auth'
 import { authOptions } from './api/auth/[...nextauth]/route'
 import NextAuthProvider from '@/providers/NextAuthProvider'
 import ReduxProvider from '@/redux/ReduxProvider'
+import TopMenuM from '@/components/TopMenuM'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,7 +28,7 @@ const session = await getServerSession(authOptions)
       <body className={inter.className}>
         <ReduxProvider>
           <NextAuthProvider session={session}>
-            <TopMenu/>
+            <TopMenuM/>
             {children}
           </NextAuthProvider>
         </ReduxProvider>
