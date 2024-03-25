@@ -41,9 +41,10 @@ export default function Booking () {
 
             <div className="text-md text-left text-gray-600">Pick-Up Hospital</div>
             <Select variant="standard" id="hospital" className="h-[2em] w-[200px]" onChange={ (e) => { setPickupHospital(e.target.value as string) } }>
-                <MenuItem value="Chula">Chulalongkorn Hospital</MenuItem>
-                <MenuItem value="Rajavithi">Rajavithi Hospital</MenuItem>
-                <MenuItem value="Thammasat">Thammasat University Hospital</MenuItem>
+                <MenuItem value="poseidon">poseidon</MenuItem>
+                <MenuItem value="LadeFrance">La de France</MenuItem>
+                <MenuItem value="colonse">colonse</MenuItem>
+                <MenuItem value="amsterdam">amsterdam</MenuItem>
             </Select>
             
             <div className="text-md text-left text-gray-600">Pick-Up Date</div>
