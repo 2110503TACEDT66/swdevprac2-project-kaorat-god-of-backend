@@ -2,6 +2,7 @@ import Link from "next/link";
 import Card from "./CardM";
 
 export default function ShopSec() {
+
     return (
         <div className="ml-20 mr-20 mb-20">
             <div className="flex flex-wrap flex-row">
@@ -10,7 +11,7 @@ export default function ShopSec() {
                 </h1>
                 <div className="flex items-start justify-center flex-col text-base md:text-xl font-sans">
                     <div className="mt-2 mb-1 font-light">Let me introduce our massage shop</div>
-                    <Link href={"/hospital"}>
+                    <Link href={"/massageshop"}>
                         <div className="hover:underline hover:underline-offset-2 text-amber-600	 font-sans">see more &rarr;</div>
                     </Link> 
                 </div>
