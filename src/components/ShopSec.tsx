@@ -19,23 +19,19 @@ export default function ShopSec() {
 
             <div className="flex justify-start items-center flex-row flex-wrap gap-8 mt-5 mb-10 bg-transparent border border-transparent transition-colors duration-200">
                 <div className="w-1/5">
-                    <Card cardName="Chulalongkorn Hospital" imgSrc="/img/card1.jpg"/>
+                    <Card cardName="poseidon" imgSrc="/img/card1.jpg"/>
                 </div>
                 
                 <div className="w-1/5">
-                    <Card cardName="Rajavithi Hospital" imgSrc="/img/card2.jpg"/>
+                    <Card cardName="La de France" imgSrc="/img/card2.jpg"/>
                 </div>
 
                 <div className="w-1/5">
-                    <Card cardName="Thammasat University Hospital" imgSrc="/img/card3.jpg"/>
+                    <Card cardName="colonse" imgSrc="/img/card3.jpg"/>
                 </div>
 
                 <div className="w-1/5">
-                    <Card cardName="Thammasat University Hospital" imgSrc="/img/card3.jpg"/>
-                </div>
-
-                <div className="w-1/5">
-                    <Card cardName="Thammasat University Hospital" imgSrc="/img/card3.jpg"/>
+                    <Card cardName="amsterdam" imgSrc="/img/card3.jpg"/>
                 </div>
             </div>
         </div>
