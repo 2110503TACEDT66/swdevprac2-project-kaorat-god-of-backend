@@ -22,7 +22,7 @@ export default function MassageSec() {
                 </div>
                 
                 <div className="w-1/5">
-                    <Card cardName="Rajavithi Hospital" imgSrc="/img/card2.jpg"/>
+                    <Card cardName="Rajavithi Hospital" imgSrc="https://drive.google.com/file/d/1sgoYCFEn4A54XJKhTObxjmIjdEbV62BK/view?usp=sharing"/>
                 </div>
 
                 <div className="w-1/5">

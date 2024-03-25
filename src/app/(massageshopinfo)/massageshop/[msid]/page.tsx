@@ -1,9 +1,9 @@
 import Image from "next/image"
 import getMassageshop from "@/libs/getMassageshop"
 
-export default async function MassagerDetailPage({ params }: { params: { hid: string } }) {
+export default async function MassagerDetailPage({ params }: { params: { msid: string } }) {
     
-    const massageshopDetail = await getMassageshop(params.hid)
+    const massageshopDetail = await getMassageshop(params.msid)
     
     return (
         <main className="text-center p-5">

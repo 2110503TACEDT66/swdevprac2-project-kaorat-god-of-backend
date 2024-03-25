@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Card from "./Card";
+import Card from "./CardM";
 import { MassageshopJson, MassageshopItem } from "../../interface";
 
 export default function massageshopCatalog({ massageshopsJson }: { massageshopsJson: MassageshopJson }) {
@@ -7,11 +7,11 @@ export default function massageshopCatalog({ massageshopsJson }: { massageshopsJ
     const massageshopsJsonReady = massageshopsJson
 
     return (
-        <div className='flex flex-row flex-wrap justify-around content-around m-5'>
+        <div className='flex justify-start items-center flex-row flex-wrap gap-8 mt-5 mb-10 bg-transparent border border-transparent transition-colors duration-200'>
             {
                 massageshopsJsonReady.data.map((massageshopItem: MassageshopItem) => (
                     <Link href={`/massageshop/${massageshopItem.id}`} className='w-1/5'>
-                        <Card massageshopName={massageshopItem.name} imgSrc={massageshopItem.picture}/>
+                        <Card cardName={massageshopItem.name} imgSrc={massageshopItem.picture}/>
                     </Link>
                     ))
             }

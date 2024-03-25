@@ -47,11 +47,14 @@ export default async function TopMenuM() {
                   {profile.data.name || "Unknown User"}
                 </div>
               </Link>)
-              : (<Link href="/api/auth/signin" underline="none">
+              : (
+              <Link href="/api/auth/signin" underline="none">
                   <div className="flex items-center h-full px-3 text-black text-md">
                     Login
                   </div>
-                </Link>)
+                </Link>
+                
+                )
           }
         </div>
     </div>
