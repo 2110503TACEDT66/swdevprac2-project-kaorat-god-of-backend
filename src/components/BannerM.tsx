@@ -35,7 +35,7 @@ export default function Banner() {
         
         <button className="bg-transparent text-white border border-white font-sans py-2 px-2 m-2 absolute bottom-0 
         hover:bg-gray-100 hover:backdrop-blur-xl hover:bg-opacity-30  hover:text-gray-100 z-30 mr-10 rounded-md transition-all mx-auto w-1/5" 
-        onClick={(e)=> {e.stopPropagation(); router.push('/api/auth/register') } }>
+        onClick={(e)=> {e.stopPropagation(); router.push('/auth/register') } }>
           Register
         </button>
         </div>
