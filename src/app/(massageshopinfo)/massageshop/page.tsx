@@ -9,7 +9,7 @@ export default async function Massageshop() {
 
     return (
         <main className="text-center p-5">
-            <h1 className="text-xl font-md">Select Massageshop</h1>
+            <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-white">Select Massageshop</h1>
             <Suspense fallback={<p>Loading ... <LinearProgress/></p>}>
                 <MassageshopCatalog massageshopsJson={massageshops}/>
             </Suspense>

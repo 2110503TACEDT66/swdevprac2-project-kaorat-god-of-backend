@@ -19,7 +19,7 @@ export default function ShopSec() {
 
             <div className="flex justify-start items-center flex-row flex-wrap gap-8 mt-5 mb-10 bg-transparent border border-transparent transition-colors duration-200">
                 <div className="w-1/5">
-                    <Card cardName="poseidon" imgSrc="/img/card1.jpg"/>
+                    <Card cardName="Poseidon" imgSrc="/img/card1.jpg"/>
                 </div>
                 
                 <div className="w-1/5">
@@ -27,11 +27,11 @@ export default function ShopSec() {
                 </div>
 
                 <div className="w-1/5">
-                    <Card cardName="colonse" imgSrc="/img/card3.jpg"/>
+                    <Card cardName="Colonse" imgSrc="/img/card3.jpg"/>
                 </div>
 
                 <div className="w-1/5">
-                    <Card cardName="amsterdam" imgSrc="/img/card3.jpg"/>
+                    <Card cardName="Amsterdam" imgSrc="/img/card4.jpg"/>
                 </div>
             </div>
         </div>

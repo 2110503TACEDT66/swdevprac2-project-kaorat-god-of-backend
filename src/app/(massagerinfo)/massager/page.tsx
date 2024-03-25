@@ -9,7 +9,7 @@ export default async function Massager() {
 
     return (
         <main className="text-center p-5">
-            <h1 className="text-xl font-md">Select Massager</h1>
+            <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-white">See All Favorite Massager</h1>
             <Suspense fallback={<p>Loading ... <LinearProgress/></p>}>
                 <MassagerCatalog massagersJson={massagers}/>
             </Suspense>
