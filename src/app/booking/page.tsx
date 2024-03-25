@@ -33,7 +33,7 @@ export default function Booking () {
 
     return (
         <main className="w-[100%] flex flex-col items-center space-y-4 mt-5 m-5 p-5">       
-            <div className="text-xl font-md">Vaccine Booking</div>
+            <div className="text-xl font-md">Massage Appointment</div>
 
             <TextField name="Name" label="Name" onChange={ (e) => { setName(e.target.value) } }/>
             <TextField name="Lastname" label="Lastname" onChange={ (e) => { setLastname(e.target.value) } }/>

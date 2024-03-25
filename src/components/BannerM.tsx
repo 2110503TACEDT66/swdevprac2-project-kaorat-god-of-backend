@@ -33,11 +33,11 @@ export default function Banner() {
         null
         }
 
-      <button className="bg-cyan-500 text-white border border-transparent font-semibold py-2 px-2 m-2 absolute bottom-0 right-0
+      {/* <button className="bg-cyan-500 text-white border border-transparent font-semibold py-2 px-2 m-2 absolute bottom-0 right-0
       hover:bg-white hover:text-cyan-600 border-cyan-600 z-30 rounded-md shadow-lg shadow-blue-500/50" 
       onClick={(e)=> {e.stopPropagation(); router.push('/hospital') }}>
           Select Hospital
-      </button>
+      </button> */}
     </div>
   )
 }

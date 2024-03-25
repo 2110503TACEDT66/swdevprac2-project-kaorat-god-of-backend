@@ -1,4 +1,3 @@
-import styles from "./topmenu.module.css"
 import Image from "next/image";
 import TopMenuItem from "./TopMenuItem";
 import { getServerSession } from "next-auth";
@@ -6,14 +5,14 @@ import {authOptions} from "@/app/api/auth/[...nextauth]/route";
 import { Link } from "@mui/material";
 import getUserProfile from "@/libs/getUserProfile";
 
-export default async function TopMenu() {
+export default async function TopMenuM() {
 
   const session = await getServerSession(authOptions)
     if (!session || !session.user.token) {
         return null
     }
 
-    const profile = await getUserProfile(session.user.token)
+  const profile = await getUserProfile(session.user.token)
 
   return (
     <div className="flex fixed top-0 left-0 justify-between right-0 flex-row px-5 py-1.25 m-0 bg-white bg-opacity-50 h-12 z-50 shadow-lg w-full backdrop-blur-xl">
