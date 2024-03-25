@@ -18,13 +18,13 @@ export default async function TopMenu() {
 
         <div className="flex flex-row align-center mt-auto mb-auto gap-x-10 hover:gap-x-16 transition-all">
           <TopMenuItem title="Reservation" pageRef="/booking" />
-          <TopMenuItem title="Massager" pageRef="/" />
-          <TopMenuItem title="Shop" pageRef="/hospital" />
+          <TopMenuItem title="Massager" pageRef="/massager" />
+          <TopMenuItem title="Shop" pageRef="/massageshop" />
         </div>
         
 
         <div className="flex flex-row items-center h-full top-0 font-sans">
-          <Link href={"/myBooking"} ><Image src="/img/chart.png" className="h-full w-auto mx-1.25 p-1" alt="myBooking" width={0} height={0} sizes="100vh"/></Link>
+          <Link href={"/mybooking"} ><Image src="/img/chart.png" className="h-full w-auto mx-1.25 p-1" alt="myBooking" width={0} height={0} sizes="100vh"/></Link>
           {
             session ? (<Link href="/api/auth/signout" underline="none">
                 <div className="flex items-center h-full px-3 text-black text-sm ">

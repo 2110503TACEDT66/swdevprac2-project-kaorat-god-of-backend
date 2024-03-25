@@ -1,5 +1,5 @@
 import BannerM from '@/components/BannerM'
-import PromoteCard from '@/components/PromoteCard'
+import MassageSec from '@/components/MassageSec'
 import ShopSec from '@/components/ShopSec'
 
 export default function Home() {
@@ -7,6 +7,7 @@ export default function Home() {
     <main>
       <BannerM/>
       <ShopSec/>
+      <MassageSec/>
     </main>
   )
 }
