@@ -1,5 +1,3 @@
-
-
 export interface MassageshopItem {
   _id: string,
   name: string,
@@ -38,4 +36,12 @@ export interface MassagerJson {
   count: number,
   pagination: Object,
   data: MassagerItem[]
+}
+
+export interface BookingItem {
+  name: string,
+  surname: string,
+  id: string,
+  hospital: string,
+  bookDate: string
 }
