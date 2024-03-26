@@ -1,5 +1,5 @@
 export default async function updateBookings(token:string,id:string,date:Date) {
-    const response = await fetch(`https://presentation-day-1-kaorat-god-of-backend.vercel.app/api/v1/appointments/${id}`,{
+    const response = await fetch(`${process.env.BACKEND_URL}/api/v1/appointments/${id}`,{
         method:'PUT',
         headers: {
             Authorization: `Bearer ${token}`, 
