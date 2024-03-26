@@ -1,7 +1,7 @@
 
 export default async function addBooking(mid:string,reservedate:Date,token:string,uid:string){
     
-    const response = await fetch(`${process.env.BACKEND_URL}/api/v1/massageshops/${mid}/appointments`, {
+    const response = await fetch(`https://presentation-day-1-kaorat-god-of-backend.vercel.app/api/v1/massageshops/${mid}/appointments`, {
         method: 'POST',
         headers: {
             Authorization:`Bearer ${token}`,
