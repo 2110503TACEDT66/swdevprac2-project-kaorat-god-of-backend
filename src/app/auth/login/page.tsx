@@ -7,7 +7,7 @@ export default function login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
-  const callbackUrl = "../";
+  const callbackUrl = "/";
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault(); // Prevent default form submission
@@ -15,7 +15,7 @@ export default function login() {
     try {
       await signIn("credentials", { email: email, password: password });
       // Redirect if successful
-      router.push(callbackUrl);
+      
       
     } catch (error) {
       // Display specific error messages
@@ -25,6 +25,7 @@ export default function login() {
         alert("An unknown error occurred. Please try again."); // Default message
       }
     }
+    router.back()
   };
 
   return (
