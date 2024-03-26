@@ -17,7 +17,7 @@ export default function MassageSec() {
             </div>  
 
             <div className="flex justify-start items-center flex-row flex-wrap gap-8 mt-5 mb-10 bg-transparent border border-transparent transition-colors duration-200 w">
-                <div className="w-1/5">
+                {/* <div className="w-1/5">
                     <Card cardName="Chulalongkorn Hospital" imgSrc="/img/card1.jpg"/>
                 </div>
                 
@@ -27,7 +27,7 @@ export default function MassageSec() {
 
                 <div className="w-1/5">
                     <Card cardName="Thammasat University Hospital" imgSrc="/img/card3.jpg"/>
-                </div>
+                </div> */}
             </div>
         </div>
     );
