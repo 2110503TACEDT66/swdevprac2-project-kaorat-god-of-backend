@@ -49,8 +49,6 @@ export default function ReservationPage({
                     token,
                     uid
             )
-                
-            
             }}>
                 Book Masssage
             </button>

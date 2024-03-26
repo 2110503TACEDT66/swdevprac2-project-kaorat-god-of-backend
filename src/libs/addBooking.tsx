@@ -17,6 +17,8 @@ export default async function addBooking(mid:string,reservedate:Date,token:strin
     
     if(!response.ok) {
         throw new Error('Cant booking');
+    }else{
+        alert("Create Successfully")
     }
 
     
