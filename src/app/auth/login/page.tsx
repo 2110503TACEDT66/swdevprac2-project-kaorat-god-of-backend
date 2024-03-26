@@ -1,13 +1,13 @@
 "use client"
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter,useSearchParams } from "next/navigation";
 import { signIn } from "next-auth/react";
 
 export default function login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
-  const callbackUrl = "/mybooking";
+  const callbackUrl = useSearchParams().get("callbackUrl") ||"/";
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault(); // Prevent default form submission
