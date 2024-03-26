@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useRouter,useSearchParams } from "next/navigation";
 import { signIn } from "next-auth/react";
 
+
 export default function login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

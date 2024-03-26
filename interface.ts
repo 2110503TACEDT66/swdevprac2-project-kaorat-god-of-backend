@@ -19,16 +19,13 @@ export interface MassageshopJson {
 }
 
 export interface MassagerItem {
-  _id: string,
-  name: string,
-  address: string,
-  district: string,
-  province: string,
-  postalcode: string,
-  tel: string,
-  picture: string,
-  __v: number,
-  id: string
+  _id:string,
+  name:string,
+  tel:string,
+  age:string,
+  massageshop:string,
+  rating:string,
+  picture:string
 }
   
 export interface MassagerJson {

@@ -11,7 +11,7 @@ export default function massagerCatalog({ massagersJson }: { massagersJson: Mass
             {
                 massagersJsonReady.data.map((massagerItem: MassagerItem) => (
                     <div className='w-1/5'>
-                        <Card cardName={massagerItem.name} imgSrc={massagerItem.picture} nextTo={`/massager/${massagerItem.id}`}/>
+                        <Card cardName={massagerItem.name} imgSrc={massagerItem.picture} nextTo={`/massagers/${massagerItem._id}`}/>
                     </div>
                     ))
             }
