@@ -2,7 +2,6 @@ import Image from "next/image"
 import getMassager from "@/libs/getMassager"
 
 export default async function MassagerDetailPage({ params }: { params: { mid: string } }) {
-    alert(params)
     const massagerDetail = await getMassager(params.mid)
     
     return (
