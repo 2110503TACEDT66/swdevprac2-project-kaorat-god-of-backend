@@ -7,7 +7,7 @@ export default function login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
-  const callbackUrl = useSearchParams().get("callbackUrl") ||"/";
+  const callbackUrl = "../";
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault(); // Prevent default form submission

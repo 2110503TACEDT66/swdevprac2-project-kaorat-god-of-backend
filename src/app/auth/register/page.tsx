@@ -10,7 +10,7 @@ export default function register() {
   const [name, setName] = useState("");
   const [tel, setTel] = useState("");
   const router = useRouter();
-  const callbackUrl = "/"; // Change the callback URL to the sign-in page
+  const callbackUrl = "../"; // Change the callback URL to the sign-in page
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault(); // Prevent default form submission
