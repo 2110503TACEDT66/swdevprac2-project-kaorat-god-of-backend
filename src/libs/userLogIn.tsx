@@ -11,6 +11,7 @@ export default async function userLogIn(userEmail: string, userPassword: string)
     })
 
     if (!response.ok) {
+        alert("fail to LogIn Please try again")
         throw new Error('Failed to log-in')
     }
 
