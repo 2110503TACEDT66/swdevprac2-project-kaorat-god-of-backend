@@ -14,7 +14,7 @@ export default async function MassagerDetailPage({ params }: { params: { mid: st
                     className="rounded-lg w-[30%]"/>
                 <div className="text-md mx-5 text-left">
                     <div>{`Name: ${massagerDetail.data.name}`}</div>
-                    <div>{`Address: ${massagerDetail.data.address}`}</div>
+                    <div>{`Address: ${massagerDetail.data.age}`}</div>
                     <div>{`Tel: ${massagerDetail.data.tel}`}</div>
                 </div>
             </div>
