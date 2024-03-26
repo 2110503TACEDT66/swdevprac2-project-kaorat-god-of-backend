@@ -1,5 +1,7 @@
 vercel: https://swdevprac2-project-kaorat-god-of-backend.vercel.app
 
+figma: https://www.figma.com/file/oPYCQuHvmopOxBynspteXp/Massage-Shop?type=design&node-id=0%3A1&mode=design&t=v6LH12hB51J2fcvK-1
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
