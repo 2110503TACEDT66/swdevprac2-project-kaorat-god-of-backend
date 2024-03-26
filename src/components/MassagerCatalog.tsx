@@ -10,9 +10,9 @@ export default function massagerCatalog({ massagersJson }: { massagersJson: Mass
         <div className='flex justify-start items-center flex-row flex-wrap gap-8 mt-5 mb-10 bg-transparent border border-transparent transition-colors duration-200'>
             {
                 massagersJsonReady.data.map((massagerItem: MassagerItem) => (
-                    <Link href={`/massager/${massagerItem.id}`} className='w-1/5'>
-                        <Card cardName={massagerItem.name} imgSrc={massagerItem.picture}/>
-                    </Link>
+                    <div className='w-1/5'>
+                        <Card cardName={massagerItem.name} imgSrc={massagerItem.picture} nextTo={`/massager/${massagerItem.id}`}/>
+                    </div>
                     ))
             }
         </div>
