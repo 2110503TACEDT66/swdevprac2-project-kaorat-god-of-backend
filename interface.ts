@@ -36,9 +36,9 @@ export interface MassagerJson {
 }
 
 export interface BookingItem {
-  name: string,
-  surname: string,
-  id: string,
-  hospital: string,
-  bookDate: string
+  _id: string,
+  apptDate: string,
+  user: string,
+  massageshop: MassageshopItem,
+  createdAt: string
 }
