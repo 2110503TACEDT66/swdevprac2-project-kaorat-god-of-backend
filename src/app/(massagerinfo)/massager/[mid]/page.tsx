@@ -1,10 +1,10 @@
 import Image from "next/image"
 import getMassager from "@/libs/getMassager"
+import getMassageshop from "@/libs/getMassageshop"
 
 export default async function MassagerDetailPage({ params }: { params: { mid: string } }) {
-    alert(params)
     const massagerDetail = await getMassager(params.mid)
-    
+    const massageshopDetail = await getMassageshop(massagerDetail.data.massageshop)
     return (
         <main className="text-center p-5">
             <div className="flex flex-row my-5">
@@ -14,6 +14,7 @@ export default async function MassagerDetailPage({ params }: { params: { mid: st
                     className="rounded-lg w-[30%]"/>
                 <div className="text-md mx-5 text-left">
                     <div>{`Name: ${massagerDetail.data.name}`}</div>
+                    <div>{`Shop : ${massageshopDetail.data.name}`}</div>
                     <div>{`Address: ${massagerDetail.data.age}`}</div>
                     <div>{`Tel: ${massagerDetail.data.tel}`}</div>
                 </div>
