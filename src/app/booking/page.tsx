@@ -1,57 +1,32 @@
-"use client"
+import { authOptions } from "../api/auth/[...nextauth]/route";
 import DateReserve from "@/components/DateReserve";
-import { TextField, Select, MenuItem } from "@mui/material";
+import { Select, MenuItem } from "@mui/material";
 import { useState } from "react";
 import dayjs, { Dayjs } from "dayjs";
-import { useDispatch } from "react-redux";
-import { AppDispatch } from "@/redux/store";
-import { BookingItem } from "../../../interface";
-import { addBooking } from "@/redux/features/bookSlice";
+import addBooking from "@/libs/addBooking";
+import getUserProfile from "@/libs/getUserProfile";
+import { useSession } from "next-auth/react";
+import ReservationPage from "./reservationPage";
+import { getServerSession } from "next-auth";
 import getMassageshops from "@/libs/getMassageshops";
 
-export default function Booking() {
-  const [massageShop, setMassageShop] = useState<string[]>([]);
-  const [pickupDate, setPickupDate] = useState<Dayjs | null>(null);
-  const [pickupHospital, setPickupHospital] = useState<string>();
+export default async function Booking () {
 
-  const dispatch = useDispatch<AppDispatch>();
+    const session = await getServerSession(authOptions);
 
+    console.log(session?.user.token)   
+    
+    if(!session || !session.user.token ) return null;
 
-  const makeBooking = () => {
-    // Handle booking logic here
-  };
+    const profile = await getUserProfile(session.user.token);
 
-  return (
-    <main className="w-[100%] flex flex-col items-center space-y-4 mt-5 m-5 p-5">
-      <div className="text-xl font-md">Massage Appointment</div>
+    const shops = await getMassageshops();
 
-      <div className="text-md text-left text-gray-600">Choose Massageshop</div>
-      <Select
-        variant="standard"
-        id="hospital"
-        className="h-[2em] w-[200px]"
-        onChange={(e) => {
-          setPickupHospital(e.target.value as string);
-        }}
-        value={pickupHospital}
-      >
-        {massageShop.map((shop, index) => (
-          <MenuItem key={index} value={shop}>
-            {shop}
-          </MenuItem>
-        ))}
-      </Select>
+    // const makeReservation = async () => {
+    //   await addBooking(pickupMassageshop,dayjs(pickupDate).toDate(),profile.token,profile._id)
+    // }
 
-      <div className="text-md text-left text-gray-600">Pick Date</div>
-      <DateReserve onDateChange={(value: Dayjs) => setPickupDate(value)} />
-
-      <button
-        name="Book Vaccine"
-        className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2 text-white shadow-sm"
-        onClick={makeBooking}
-      >
-        Book Massage
-      </button>
-    </main>
-  );
+    return (
+        <ReservationPage shops={shops} token={session.user.token} uid={session.user._id}/>
+    );
 }
