@@ -4,13 +4,15 @@ import Image  from "next/image"
 import { useState } from "react"
 import {useRouter} from "next/navigation"
 import { useSession } from "next-auth/react"
+import getUserProfile from "@/libs/getUserProfile"
 
-export default function Banner() {
+export default async function Banner() {
   const covers = ['/img/cover1.jpg', '/img/cover2.jpg', '/img/cover3.jpg', '/img/cover4.jpg']
   const [ index, setIndex ] = useState(0)
   const router = useRouter()
 
   const { data: session } = useSession()
+  const profile = session ? await getUserProfile(session.user.token) : null;
   // console.log(session?.user.token)
 
   return (
@@ -27,7 +29,7 @@ export default function Banner() {
 
         {session ? 
         <div className="flex justify-center items-center text-center relative h-2/5 px-3 text-white text-2xl z-30 font-black ">
-           Welcome {session.user?.name}
+           Welcome {profile.data.name || "Unknown User"}
         </div> 
         : 
         <div className="flex justify-center">

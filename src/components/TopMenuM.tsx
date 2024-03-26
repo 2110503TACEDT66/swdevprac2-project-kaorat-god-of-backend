@@ -43,8 +43,7 @@ export default async function TopMenuM() {
           {
             session ? (<Link href="/api/auth/signout" underline="none">
                 <div className="flex items-center h-full px-3 text-black text-sm ">
-                  Logout of 
-                  {profile.data.name || "Unknown User"}
+                  Logout of {profile.data.name || "Unknown User"}
                 </div>
               </Link>)
               : (
