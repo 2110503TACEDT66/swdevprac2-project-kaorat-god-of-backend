@@ -9,16 +9,6 @@ export default async function TopMenuM() {
 
   const session = await getServerSession(authOptions)
 
-    // if (!session || !session.user.token) 
-    // {
-    //     return null
-    // }
-  // const profile = await getUserProfile(session.user.token)
-
-  const defaultMenuItems = [
-    // Define default menu items here (if applicable)
-  ];
-
   const profile = session ? await getUserProfile(session.user.token) : null;
   // const menuItems = profile?.menuItems || defaultMenuItems; // Use profile items or defaults
 

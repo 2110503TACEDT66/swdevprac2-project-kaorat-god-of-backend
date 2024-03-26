@@ -1,5 +1,4 @@
 'use client'
-import styles from "./banner.module.css"
 import Image  from "next/image"
 import { useState } from "react"
 import {useRouter} from "next/navigation"

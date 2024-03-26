@@ -1,11 +1,10 @@
 'use client'
-import updateBookings from "@/libs/updateBooking"
 import Link from "next/link"
 
     
 
 export default function UpdateButton( 
-    { token, id } : { token: string, id: string } ) {
+    { id } : { id: string } ) {
 
     return (
         <Link href={`mybooking/${id}`}>

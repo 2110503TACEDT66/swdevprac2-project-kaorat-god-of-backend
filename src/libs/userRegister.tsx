@@ -1,4 +1,3 @@
-
 export default async function userRegister(name: string, tel: string, email: string, password: string) {
     const requestBody = {
       name: name,

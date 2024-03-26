@@ -1,11 +1,7 @@
 'use client'
 import React from "react"
-import Image from "next/image"
 
 export default function Card( { children } : {children : React.ReactNode} ) {
-    function onHospitalSelected() {
-        // alert("You Selected " + contentName)
-    }
 
     function onCardMouseACtion(event: React.SyntheticEvent) {
         if (event.type === 'mouseover') {

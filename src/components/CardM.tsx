@@ -1,8 +1,6 @@
 import Image from "next/image"
 import InteractiveCard from "./InteractiveCard"
-import Rating from '@mui/material/Rating';
 import React from 'react';
-import { useState } from 'react';
 import Link from "next/link";
 
 export default function CardM( {cardName , imgSrc , nextTo } : {cardName : string, imgSrc : string , nextTo: string} ) { 

@@ -1,7 +1,4 @@
 import Link from "next/link";
-import Card from "./CardM";
-// import getMassageshops from "@/libs/getMassageshops"
-// import { MassageshopJson, MassageshopItem } from "../../interface";
 
 export default function ShopSec() {
 
@@ -18,24 +15,6 @@ export default function ShopSec() {
                     </Link> 
                 </div>
             </div>  
-
-            {/* <div className="flex justify-start items-center flex-row flex-wrap gap-8 mt-5 mb-10 bg-transparent border border-transparent transition-colors duration-200">
-                <div className="w-1/5">
-                    <Card cardName="Poseidon" imgSrc="https://drive.google.com/uc?export=download&id=1MtOXlRS4dR9JzFVV8USIxdkkFT28lCA4" nextTo=""/>
-                </div>
-                
-                <div className="w-1/5">
-                    <Card cardName="La de France" imgSrc="/img/card2.jpg"/>
-                </div>
-
-                <div className="w-1/5">
-                    <Card cardName="Colonse" imgSrc="/img/card3.jpg"/>
-                </div>
-
-                <div className="w-1/5">
-                    <Card cardName="Amsterdam" imgSrc="/img/card4.jpg"/>
-                </div>
-            </div> */}
         </div>
     );
 }

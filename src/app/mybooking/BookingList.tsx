@@ -35,7 +35,7 @@ export default async function BookingList() {
                         <div className="text-sm">Booking Date: {dayjs(bookItem.apptDate).format('YYYY/MM/DD')}</div>
                         <div className='flex flex-row gap-2'>
                             <RemoveButton token={session.user.token} id={bookItem._id}/>
-                            <UpdateButton token={session.user.token} id={bookItem._id}/>
+                            <UpdateButton id={bookItem._id}/>
                         </div>
                     </div>
                 ))

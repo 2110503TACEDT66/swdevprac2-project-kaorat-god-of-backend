@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Card from "./CardM";
 
 export default function MassageSec() {
     return (
