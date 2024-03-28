@@ -1,38 +1,7 @@
 import massagerCatalog from "@/components/MassagerCatalog";
 import massageshopCatalog from "@/components/MassageshopCatalog";
-import { render, screen } from "@testing-library/react";
+import { render, screen , waitFor} from "@testing-library/react";
 import {MassagerJson, MassageshopJson}  from "../interface";
-
-// const mockData: MassagerJson = {
-//         "success": true,
-//         "count": 1,
-//         "data": [
-//             {
-//                 "_id": "66017c17cdb906bb34be7e36",
-//                 "name": "Alfredo Dibbert",
-//                 "tel": "334-871-1717",
-//                 "age": "555",
-//                 "massageshop" : {
-//                     "_id": "6601471ca3742e17e357026b",
-//                     "name": "Poseidon",
-//                     "province": "AZ",
-//                     "tel": "(480) 333-3333",
-//                     "id": "6601471ca3742e17e357026b"
-//                 },
-//                 "rating": "0",
-//                 "__v": 0,
-//                 "picture": "https://drive.google.com/uc?export=download&id=1jkmeOrjIPF_CohW6Ytwz7n7kp5xNhBY4"
-//             }
-//         ]
-//     }
-// describe("MassagerCatalog", () => {
-//   it("should render MassagerCatalog", async() => {
-//     const mas = await massagerCatalog({ massagersJson: mockData});
-//     render(mas);
-//     const element = screen.getByText("Massager Catalog");
-//     // expect(element).toBeInTheDocument();
-//   });
-// });
 
 const mockData = {
     "success": true,
@@ -173,11 +142,16 @@ const mockData = {
     ]
 }
 
-describe("MassagerCatalog", () => {
-  it("should render MassagerCatalog", async() => {
-    const mas = await massagerCatalog({ massagersJson: mockData});
+describe("massageshopCatalog", () => {
+  it("should render massageshopCatalog", async() => {
+    const mas = await massageshopCatalog({ massageshopsJson: mockData});
     render(mas);
-    const element = screen.getByText("Massager Catalog");
+    await waitFor(
+        ()=> {
+        const carImages = screen.queryAllByRole('img')
+        expect(carImages).toHaveLength(4)
+        }
+    )
     // expect(element).toBeInTheDocument();
   });
 });
