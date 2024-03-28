@@ -148,10 +148,9 @@ describe("massageshopCatalog", () => {
     render(mas);
     await waitFor(
         ()=> {
-        const carImages = screen.queryAllByRole('img')
-        expect(carImages).toHaveLength(4)
+        const shopImage = screen.queryAllByRole('img')
+        expect(shopImage).toHaveLength(4)
         }
     )
-    // expect(element).toBeInTheDocument();
   });
 });
